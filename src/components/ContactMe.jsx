@@ -17,32 +17,52 @@ function ContactMe() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_bms75xi", "template_7wlrn8v", form.current, {
-        publicKey: "GkQEgYMOLqXLT5wj9",
-      })
-      .then(
-        () => {
-          toast.success("Thank You for your Email", {
-            position: "top-right",
-            autoClose: 3000,
-            closeOnClick: true,
-            pauseOnHover: false,
-            theme: "colored",
-            transition: Bounce,
-          });
-        },
-        (error) => {
-          toast.error("Error Failed to send Email", {
-            position: "top-right",
-            autoClose: 3000,
-            closeOnClick: true,
-            pauseOnHover: false,
-            theme: "colored",
-            transition: Bounce,
-          });
-        }
+    const formData = new FormData(form.current);
+    const fromName = formData.get("from_name");
+    const userEmail = formData.get("user_email");
+    const message = formData.get("message");
+
+    console.log(formData.get("from_name"));
+
+    if (!fromName || !userEmail || !message) {
+      throw new Error(
+        toast.error("Fill all the fields", {
+          position: "top-right",
+          autoClose: 3000,
+          closeOnClick: true,
+          pauseOnHover: false,
+          theme: "colored",
+          transition: Bounce,
+        })
       );
+    } else {
+      emailjs
+        .sendForm("service_bms75xi", "template_7wlrn8v", form.current, {
+          publicKey: "GkQEgYMOLqXLT5wj9",
+        })
+        .then(
+          () => {
+            toast.success("Thank You for your Email", {
+              position: "top-right",
+              autoClose: 3000,
+              closeOnClick: true,
+              pauseOnHover: false,
+              theme: "colored",
+              transition: Bounce,
+            });
+          },
+          (error) => {
+            toast.error("Error Failed to send Email", {
+              position: "top-right",
+              autoClose: 3000,
+              closeOnClick: true,
+              pauseOnHover: false,
+              theme: "colored",
+              transition: Bounce,
+            });
+          }
+        );
+    }
     e.target.reset();
   };
 

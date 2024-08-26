@@ -15,7 +15,7 @@ export default function ProjectCards() {
   const dark = useToggleDarkMode((state) => state.dark);
 
   return (
-    <div className=" grid grid-cols-2 place-items-center">
+    <div className=" grid grid-cols-1 md:grid-cols-2  place-items-center">
       <div className="bg-[#505050ce] dark:bg-[#B6B6B6] w-[370px] h-[450px] m-16 rounded-[35px] overflow-hidden transition duration-300 hover:-translate-y-5">
         <a href="https://crud-modern.onrender.com/" target="_blank">
           {!dark ? (

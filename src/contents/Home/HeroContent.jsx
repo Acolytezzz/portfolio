@@ -8,47 +8,49 @@ export default function HeroContent() {
   const scrollTo = useSmoothScroll((state) => state.scrollTo);
 
   return (
-    <div className="flex justify-between py-10">
-      <div className="my-auto">
-        <p className="text-3xl dark:text-white font-Cantora  leading-10 mb-4">
-          Hello, I am <br /> Aman Shrestha <br /> Web Developer & Programmer
-        </p>
-        <p className="text-xl dark:text-white font-Poppins font-medium leading-8">
-          I build and code sleek, functional website <br /> that bring ideas to
-          life
-        </p>
-        <div className="flex justify-center">
-          <a
-            href={RESUME}
-            target="_blank"
-            className="text-2xl dark:text-white font-Cantora btn-custom m-4"
-          >
-            My Resume
-          </a>
-          <button
-            className="text-2xl dark:text-white font-Cantora btn-custom m-4"
-            onClick={() => scrollTo("ContactMeId")}
-          >
-            Contact Me
-          </button>
+    <div className="flex justify-center items-center">
+      <div className="flex justify-between py-10 w-full max-w-[950px]">
+        <div className="my-auto">
+          <p className="text-3xl dark:text-white font-Cantora  leading-10 mb-4">
+            Hello, I am <br /> Aman Shrestha <br /> Web Developer & Programmer
+          </p>
+          <p className="text-xl dark:text-white font-Poppins font-medium leading-8">
+            I build and code sleek, functional website <br /> that bring ideas
+            to life
+          </p>
+          <div className="flex justify-center">
+            <a
+              href={RESUME}
+              target="_blank"
+              className="text-2xl dark:text-white font-Cantora btn-custom m-4"
+            >
+              My Resume
+            </a>
+            <button
+              className="text-2xl dark:text-white font-Cantora btn-custom m-4"
+              onClick={() => scrollTo("ContactMeId")}
+            >
+              Contact Me
+            </button>
+          </div>
+          <p className=" text-xl dark:text-white font-bold font-Poppins">
+            @FindMe At:
+          </p>
+          <div className="flex my-3 ml-16">
+            <a
+              href="https://www.linkedin.com/in/aman-shrestha-103b72192/"
+              target="_blank"
+            >
+              <BiLogoLinkedinSquare className="text-6xl mx-2 text-[#0077B5] dark:text-blue-600 cursor-pointer" />
+            </a>
+            <a href="https://github.com/Acolytezzz" target="_blank">
+              <IoLogoGithub className="text-[3.5rem] mx-2 text-[#2b3137] dark:text-slate-200 cursor-pointer" />
+            </a>
+          </div>
         </div>
-        <p className=" text-xl dark:text-white font-bold font-Poppins">
-          @FindMe At:
-        </p>
-        <div className="flex my-3 ml-16">
-          <a
-            href="https://www.linkedin.com/in/aman-shrestha-103b72192/"
-            target="_blank"
-          >
-            <BiLogoLinkedinSquare className="text-6xl mx-2 text-[#0077B5] dark:text-blue-600 cursor-pointer" />
-          </a>
-          <a href="https://github.com/Acolytezzz" target="_blank">
-            <IoLogoGithub className="text-[3.5rem] mx-2 text-[#2b3137] dark:text-slate-200 cursor-pointer" />
-          </a>
+        <div>
+          <img src={HeroImage} alt="hero-img" className="rounded-full m-4" />
         </div>
-      </div>
-      <div>
-        <img src={HeroImage} alt="hero-img" className="rounded-full m-4" />
       </div>
     </div>
   );

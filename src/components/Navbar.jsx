@@ -11,7 +11,7 @@ export const Navbar = () => {
   }));
 
   return (
-    <div className="flex justify-between w-full h-[70px]">
+    <div className="flex justify-between w-full max-w-[950px] h-[70px]">
       <div className="flex">
         <p className="font-Anta text-4xl my-auto cursor-pointer dark:text-white">
           <Link to={"/"}>AMAN</Link>

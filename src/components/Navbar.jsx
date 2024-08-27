@@ -19,21 +19,25 @@ export const Navbar = () => {
 
         {!dark ? (
           <TbMoonStars
-            className="text-3xl my-auto ml-12 rounded-full hover:scale-125 hover:bg-black hover:text-white hover:border-white transform transition-all duration-300 ease-in-out cursor-pointer"
+            className="text-3xl my-auto ml-4 sm:ml-12 rounded-full hover:scale-125 hover:bg-black hover:text-white hover:border-white transform transition-all duration-300 ease-in-out cursor-pointer"
             onClick={toggleDarkMode}
           />
         ) : (
           <IoSunny
-            className="text-3xl dark:text-white my-auto ml-12 rounded-full hover:scale-125 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black  transform transition-all duration-300 ease-in-out cursor-pointer"
+            className="text-3xl dark:text-white my-auto ml-4 sm:ml-12 rounded-full hover:scale-125 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black  transform transition-all duration-300 ease-in-out cursor-pointer"
             onClick={toggleDarkMode}
           />
         )}
       </div>
       <div className="flex">
-        <button className="font-Anta text-2xl text-gray-600 dark:text-slate-300 my-auto mr-12">
+        <button className="font-Anta text-2xl text-gray-600 dark:text-slate-300 my-auto mr-4 sm:mr-12">
           <Link to={"/projects"}>PROJECTS</Link>
         </button>
-        <a href={RESUME} target="_blank" className="font-Anta text-2xl dark:text-white my-auto btn-custom">
+        <a
+          href={RESUME}
+          target="_blank"
+          className="font-Anta text-2xl dark:text-white my-auto btn-custom"
+        >
           RESUME
         </a>
       </div>

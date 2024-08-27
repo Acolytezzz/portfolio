@@ -38,7 +38,7 @@ export default function HeroContent() {
           </p>
           <div className="flex justify-center my-3 ml-16">
             <a
-              href="https://www.linkedin.com/in/aman-shrestha-103b72192/"
+              href="https://www.linkedin.com/in/aman-stha/"
               target="_blank"
             >
               <BiLogoLinkedinSquare className="text-6xl mx-2 text-[#0077B5] dark:text-blue-600 cursor-pointer" />

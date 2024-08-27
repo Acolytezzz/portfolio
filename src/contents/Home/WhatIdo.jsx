@@ -15,7 +15,7 @@ import tailwindCSS from "../../images/tailwind.svg";
 export default function WhatIdo() {
   return (
     <div className="flex justify-center items-center">
-      <div className="flex flex-col items-center my-12  sm:px-12 w-full max-w-[1050px]">
+      <div className="flex flex-col items-center my-12 px-4 sm:px-12 w-full max-w-[1050px]">
         <p className="text-3xl dark:text-white font-Cantora underline underline-offset-4 mb-12">
           What I Do?
         </p>
@@ -25,7 +25,7 @@ export default function WhatIdo() {
             alt="webDevImg"
             className="w-[30rem] tab:w-[49%] rounded-3xl my-2"
           />
-          <div className="max-w-[35rem] tab:w-[49%] m-2 p-4">
+          <div className="max-w-[35rem] tab:w-[49%] m-2">
             <p className="text-[1.7rem] dark:text-white font-Cantora text-center mb-6">
               Web Development
             </p>
@@ -50,12 +50,12 @@ export default function WhatIdo() {
           </div>
         </div>
         <div className="flex flex-col tab:flex-row justify-center items-center mb-8">
-        <img
+          <img
             src={backend}
             alt="backendImg"
             className="w-[30rem] rounded-3xl my-2 block tab:hidden"
           />
-          <div className="max-w-[35rem] tab:w-[49%] m-2 p-4">
+          <div className="max-w-[35rem] tab:w-[49%] m-2 ">
             <p className="text-[1.7rem] dark:text-white font-Cantora text-center">
               Backend Development
             </p>
@@ -90,7 +90,7 @@ export default function WhatIdo() {
             alt="webDevImg"
             className="w-[30rem] tab:w-[49%] rounded-3xl my-2"
           />
-          <div className="max-w-[35rem] tab:w-[49%] m-2 p-4">
+          <div className="max-w-[35rem] tab:w-[49%] m-2 ">
             <p className="text-[1.7rem] dark:text-white font-Cantora text-center mb-6">
               UI/UX Design
             </p>

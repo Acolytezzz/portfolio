@@ -13,10 +13,12 @@ function App() {
 
   // bg-[#f3efeb] dark:bg-[#212432]
 
+  //w-[100%] md:w-[90%] lg:w-[80%] xl:w-[70%] 
+
   return (
     <div className={!dark ? "" : "dark"}>
       <div className="bg-[#f3efeb] dark:bg-[#212432] overflow-x-hidden">
-        <div className="flex flex-col items-center mx-auto w-[100%] md:w-[90%] lg:w-[80%] xl:w-[70%] ">
+        <div className="flex flex-col items-center mx-auto ">
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
